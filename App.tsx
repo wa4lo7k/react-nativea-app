@@ -1,45 +1,37 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
+ * React Native Navigation App
+ * Demonstrates Stack and Bottom Tab Navigation
  *
  * @format
  */
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
+import React, {useState} from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {StatusBar, View} from 'react-native';
+import 'react-native-gesture-handler';
+import AuthNavigator from './src/navigation/AuthNavigator';
+import TabNavigator from './src/navigation/TabNavigator';
+import NavigationToggle from './src/components/NavigationToggle';
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+function App(): React.JSX.Element {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  return (
-    <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppContent />
-    </SafeAreaProvider>
-  );
-}
-
-function AppContent() {
-  const safeAreaInsets = useSafeAreaInsets();
+  const toggleNavigation = () => {
+    setIsAuthenticated(!isAuthenticated);
+  };
 
   return (
-    <View style={styles.container}>
-      <NewAppScreen
-        templateFileName="App.tsx"
-        safeAreaInsets={safeAreaInsets}
+    <View style={{flex: 1}}>
+      <NavigationContainer>
+        <StatusBar barStyle="light-content" backgroundColor="#007AFF" />
+        {isAuthenticated ? <TabNavigator /> : <AuthNavigator />}
+      </NavigationContainer>
+      <NavigationToggle
+        onToggle={toggleNavigation}
+        isAuthenticated={isAuthenticated}
       />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default App;

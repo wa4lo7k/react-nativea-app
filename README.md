@@ -22,31 +22,31 @@ This React Native application demonstrates navigation patterns including Stack N
 ### Task 1: Stack Navigation Screens
 
 **Welcome Screen**  
-![Welcome Screen](/assets/welcome.png)
+![Welcome Screen](./assets/welcome.png)
 
 **Sign In Screen**  
-![Sign In Screen](/assets/sign-in.png)
+![Sign In Screen](./assets/sign-in.png)
 
 **Sign Up Screen**  
-![Sign Up Screen](/assets/sign-up.png)
+![Sign Up Screen](./assets/sign-up.png)
 
 ### Task 2: Bottom Tab Navigation Screens
 
 **Home Screen**  
-![Home Screen](/assets/home-screen.png)
+![Home Screen](./assets/home-screen.png)
 
 **Profile Screen**  
-![Profile Screen](/assets/Profile.png)
+![Profile Screen](./assets/Profile.png)
 
 **Settings Screen**  
-![Settings Screen](/assets/Settings.png)
+![Settings Screen](./assets/Settings.png)
 
 **About Screen**  
-![About Screen](/assets/About.png)
+![About Screen](./assets/About.png)
 
 ### Project Structure
 
-![File Structure](/assets/file-structure.png)
+![File Structure](./assets/file-structure.png)
 
 ## Installation & Setup
 

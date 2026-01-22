@@ -22,7 +22,7 @@ This React Native application demonstrates navigation patterns including Stack N
 ### Task 1: Stack Navigation Screens
 
 **Welcome Screen**  
-![Welcome Screen](/assets/welcome.png)
+![Welcome Screen](./assets/welcome.png)
 
 **Sign In Screen**  
 ![Sign In Screen](/assets/sign-in.png)
